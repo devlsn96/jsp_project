@@ -447,17 +447,17 @@ ul, li, a, button {
                    <i class="fas fa-shopping-cart"></i>
                 </a>
                 <ul>
-                <%
+                  <%
                        // 세션에 사용자 정보가 있는지 확인
                        String user_id = (String)session.getAttribute("user_id");
                        if (user_id == null) {
                            // 로그인되지 않은 상태
                    %>
-                        <li><a href="/user/UserLogin.us">로그인</a></li>
+                      <li><a href="/user/UserLogin.us">로그인</a></li>
                       <li><a href="/user/UserJoin.us">회원가입</a></li>
                    <%
                        } else {
-                           // 로그인된 상태
+                       // 로그인된 상태
                    %>
                        <li><a href="/user/UserLogout.us">로그아웃</a></li>
                    <%
@@ -516,7 +516,7 @@ ul, li, a, button {
              <nav>
                    <div class="community-menu">
                     <a class="header-lower__item" href="/index.jsp">홈</a>
-                    <a class="header-lower__item" href="/board/BoardList.bo">게시판</a>
+                    <a class="header-lower__item" href="/freeBoard/BoardList.bo">자유게시판</a>
                     <a class="header-lower__item" href="/app/qna/qna.jsp">Q&amp;A</a>
                     </div>
                      <!-- 쇼핑 하단 메뉴 추가 -->

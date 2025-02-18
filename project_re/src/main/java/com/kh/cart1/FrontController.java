@@ -2,8 +2,6 @@ package com.kh.cart1;
 
 import java.io.IOException;
 
-import javax.swing.text.DefaultEditorKit.DefaultKeyTypedAction;
-
 import com.kh.web.action.Action;
 import com.kh.web.action.ActionForward;
 import com.kh.web.action.DefaultAction;

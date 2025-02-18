@@ -1,5 +1,5 @@
-<%@page import="chat.dao.ChatDTO"%>
-<%@page import="chat.dao.ChatDAO"%>
+<%@page import="com.kh.web.chat.dao.ChatDTO"%>
+<%@page import="com.kh.web.chat.dao.ChatDAO"%>
 <%@ page import="java.io.*, javax.servlet.*, java.util.*" %>
 <%
 	String userID = request.getParameter("userID");

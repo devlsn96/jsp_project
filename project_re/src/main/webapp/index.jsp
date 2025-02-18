@@ -64,7 +64,7 @@
   </div>
   <a href="<%=request.getContextPath()%>/cart/cart.jsp"><i class="fas fa-shopping-cart"></i></a>
   <ul>
-     <%
+    <%
         // 세션에 사용자 정보가 있는지 확인
         String user_id = (String)session.getAttribute("user_id");
         if (user_id == null) {
@@ -102,42 +102,41 @@
           <li><a href=""><h4>인테리어 질문하기</h4><p>인테리어 고수들과 전문가들에게 질문해 보세요.</p></a></li>
         </ul>
       </div>
-      <script>
-    document.querySelector('.header-upper__writeBt').addEventListener('click', function() {
-      const lists = document.querySelector('.header-upper__lists');
-      // 토글 기능을 적용
-      if (lists.style.display === 'none' || lists.style.display === '') {
-        lists.style.display = 'block'; // 보이게
-      } else {
-        lists.style.display = 'none';  // 숨기기
-      }
-    });
-    
-    document.querySelector('.header-upper__serviceBt').addEventListener('click', function() {
-        const serviceLists = document.querySelector('.header-upper__serviceLists');
-        // 토글 기능을 적용
-        if (serviceLists.style.display === 'none' || serviceLists.style.display === '') {
-          serviceLists.style.display = 'block'; // 보이게
-        } else {
-          serviceLists.style.display = 'none';  // 숨기기
-        }
-      });
-  </script>
+	     <script>
+	    	document.querySelector('.header-upper__writeBt').addEventListener('click', function() {
+	      		const lists = document.querySelector('.header-upper__lists');
+		      	// 토글 기능을 적용
+		      	if (lists.style.display === 'none' || lists.style.display === '') {
+		        	lists.style.display = 'block'; // 보이게
+		      	} else {
+		        	lists.style.display = 'none';  // 숨기기
+		      	}
+	    	});
+	    
+	    	document.querySelector('.header-upper__serviceBt').addEventListener('click', function() {
+	        	const serviceLists = document.querySelector('.header-upper__serviceLists');
+		        // 토글 기능을 적용
+		        if (serviceLists.style.display === 'none' || serviceLists.style.display === '') {
+		          serviceLists.style.display = 'block'; // 보이게
+		        } else {
+		          serviceLists.style.display = 'none';  // 숨기기
+		        }
+	      	});
+	  	</script>
     </li>
   </ul>
 </div>
 </div>
 </div>
  
-
 <!-- 네비게이션 하단----------------------------------------------------------- -->
  <div class="header-lower">
     <div class="inner">
        <nav>
        			<div class="community-menu">
               <a class="header-lower__item active" href="/index.jsp">홈</a>
-              <a class="header-lower__item" href="/board/BoardList.bo">게시판</a>
-              <a class="header-lower__item" href="/app/qna/qna.jsp">Q&A</a>
+              <a class="header-lower__item" href="/freeBoard/BoardList.bo">자유게시판</a>
+              <a class="header-lower__item" href="/app/qna/qna.jsp">Q&amp;A</a>
               </div>
                <!-- 쇼핑 하단 메뉴 추가 -->
            		 <div class="shopping-menu" style="display: none;"> <!-- 기본적으로 숨김 -->

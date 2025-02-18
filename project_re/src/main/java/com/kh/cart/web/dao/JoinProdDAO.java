@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import com.kh.web.cart.dto.CartChangeDTO;
 import com.kh.web.cart.dto.CartProdDTO; // 경로 확인
 import com.kh.web.cart.dto.JoinProdDTO;
-import com.kh.app.board.dao.BoardDTO;
+import com.kh.web.freeBoard.dao.BoardDTO;
 import com.kh.mybatis.SqlMapConfig;
 
 import java.util.ArrayList;

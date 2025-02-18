@@ -1,4 +1,4 @@
-package com.kh.web.action;
+package com.kh.web.chat.action;
 
 public class ActionForward {
 	private boolean isRedirect;
@@ -6,7 +6,8 @@ public class ActionForward {
 	
 	public ActionForward() {}
 	
-	public ActionForward(boolean isRedirect, String path) {
+	public ActionForward(boolean isRedirect, 
+			String path) {
 		super();
 		this.isRedirect = isRedirect;
 		this.path = path;
@@ -28,8 +29,8 @@ public class ActionForward {
 		this.path = path;
 	}
 	
-	
-	
 }
+
+
 
 
