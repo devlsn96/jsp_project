@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Shopping">
+	<!-- shopping_home에 상품 6개 출력 -->
+	<select id="getProductList" resultType="productdto">
+		SELECT * FROM PRODUCT WHERE ROWNUM &lt;= 6
+		ORDER BY PROD_NUM DESC
+	</select>
+	
+	<!-- shopping_home에 모든 상품 목록 출력 -->
+	<select id="getAllProductList" resultType="productdto">
+		SELECT * FROM PRODUCT
+		ORDER BY PROD_NUM DESC
+	</select>
+	
+	<!-- shopping_category에 해당하는 카테고리의 상품만 출력 -->
+	<select id="getCategoryProductList" parameterType="String" resultType="productdto">
+		SELECT * FROM PRODUCT WHERE PROD_CATEGORY = #{prod_category}
+		ORDER BY PROD_NUM DESC
+	</select>
+	
+	<!-- shopping_detailview에 해당하는 prod_num값의 상품 정보 출력 -->
+	<select id="getDetail" parameterType="int" resultType="productdto">
+	    SELECT * FROM PRODUCT WHERE PROD_NUM = #{prod_num}
+	    ORDER BY PROD_NUM DESC
+	</select>
+
+	<!-- shopping_detailview에 해당하는 상품의 리뷰 출력 -->
+	<select id="getReviewList" resultType="reviewdto">
+        SELECT * FROM REVIEW WHERE PROD_NUM = #{prod_num}
+        ORDER BY REVIEWID DESC
+    </select>
+    
+    <!-- review_seq -->
+    <select id="getSeq" resultType="int">
+    	SELECT review_seq.currval FROM dual
+    </select>
+    
+    <!-- 리뷰 작성 -->
+    <select id="addReview" parameterType="reviewdto">
+    	INSERT INTO REVIEW VALUES 
+    	(review_seq.nextval, #{PROD_NUM}, #{USER_ID, jdbcType=VARCHAR}, #{REVIEW_CONTENTS}, #{REVIEW_DATE}, #{IMAGES_PATH, jdbcType=VARCHAR}, #{RATING})
+    </select>
+    
+    
+    
+    
+    <!-- shoppingcart 시퀀스 -->
+    <select id="getShoCartSeq" parameterType = "String" resultType="int">
+    	SELECT CART_NUM FROM SHOPPING_CART
+    	WHERE USER_ID = #{userId}
+    	AND ROWNUM = 1
+    </select>
+    
+    <!-- cartprod_seq -->
+    <select id="getCartProdSeq" resultType="int">
+    	SELECT cartprod_seq.currval FROM dual
+    </select>
+    
+	<select id="getShoCartNum" resultType="int">
+    	SELECT CART_NUM FROM SHOPPING_CART sc 
+		WHERE USER_ID = #{USER_ID} AND
+		ROWNUM = 1
+    </select>
+    
+    <!-- 장바구니에 구매 정보 담기 -->
+    <insert id="insertCart" parameterType="cartproddto">
+    	INSERT INTO CART_PROD VALUES
+		(#{CART_NUM}, #{PROD_NUM}, #{PROD_CNT}, #{PROD_PRICE})
+    </insert>
+    
+    <insert id="addShoCartNum" parameterType="String">
+    	INSERT INTO SHOPPING_CART sc 
+		VALUES (SEQ_CART_NUM.nextval,#{userId},0,0)
+    </insert>
+    
+</mapper>
