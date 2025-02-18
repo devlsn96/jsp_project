@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kh.web.order.dao.OrdersDAO">
+
+<insert id="insertOrder" parameterType="com.kh.web.order.dto.OrdersDTO">
+    INSERT INTO ORDERS (ORDER_NUM, USER_ID, TOTAL_PRICE, ADDRDETAIL, ZIPCODE, TEL, REQ, TOTAL_PROD_CNT) 
+    VALUES (SEQ_ORDER_NUM.NEXTVAL, #{userId}, #{totalPrice}, #{addrDetail}, #{zipCode}, #{tel}, #{req}, #{totalProdCnt})
+</insert>
+
+
+
+
+</mapper>

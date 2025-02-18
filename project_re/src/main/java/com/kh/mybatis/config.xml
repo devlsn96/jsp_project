@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="com.kh.web.cart.dto.ProductDTO" alias="productdto"/>
+        <typeAlias type="com.kh.web.cart.dto.CartProdDTO" alias="cartproddto"/>
+        <typeAlias type="com.kh.web.cart.dto.CartDTO" alias="cartdto"/>
+        <typeAlias type="com.kh.web.cart.dto.JoinProdDTO" alias="joinproddto"/>
+        <typeAlias type="com.kh.web.user.dao.UsersDTO" alias="usersdto"/>
+        <typeAlias type="com.kh.web.cart.dto.CartChangeDTO" alias="CartChangeDTO"/>
+		<typeAlias type="com.kh.app.shopping.dao.ReviewDTO" alias="reviewdto"/>
+		<typeAlias type="com.kh.app.shopping.dao.ShoppingCartDTO" alias="shocartdto"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+                <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+                <property name="username" value="jsp"/>
+                <property name="password" value="jsp"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="com/kh/web/sql/ProductMapper.xml"/>
+        <mapper resource="com/kh/web/sql/CartProdMapper.xml"/>
+        <mapper resource="com/kh/web/sql/CartMapper.xml"/>
+        <mapper resource="com/kh/web/sql/JoinProd.xml"/>
+        <mapper resource="com/kh/web/sql/user.xml"/>
+        <mapper resource="com/kh/web/sql/shopping.xml"/>
+        <mapper resource="com/kh/web/sql/OrdersMapper.xml"/> 
+    </mappers>
+</configuration>
+
+
+
+
+
+
+
+
+
+

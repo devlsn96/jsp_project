@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Chat">
+	<select id="getChatList" resultType="chatdto">
+		SELECT * FROM chat
+		WHERE user_ID = #{userID}
+		ORDER BY messagesequence 
+	</select>
+	<insert id="insertChat" parameterType="chatdto">
+		INSERT INTO chat VALUES
+		(#{userID},SEQ_CHAT_SEQ.NEXTVAL,#{message},#{sendID})
+	</insert>
+</mapper>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Board">
+
+	
+	<select id="getBoardDetail" resultType="boarddto">
+		SELECT * FROM board
+		WHERE boardID= #{boardID}
+	</select>
+	
+	<select id="getBoardList" resultType="boarddto">
+        SELECT * 
+	    FROM (
+	        SELECT a.*, ROWNUM rnum 
+	        FROM (
+	            SELECT * 
+	            FROM board 
+	            WHERE BOARDTYPE = 2
+	            ORDER BY BOARDID DESC
+	        ) a 
+    ) 
+    WHERE rnum BETWEEN #{offset}+1 AND #{offset}+#{pageSize}
+    </select>
+    
+	<select id="getTotalCount" resultType="int">
+        SELECT COUNT(*) FROM board WHERE BOARDTYPE = 2
+    </select>
+    
+</mapper>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

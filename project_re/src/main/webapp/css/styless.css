@@ -1,0 +1,173 @@
+/* 기본 스타일 설정 */
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 헤더 스타일 */
+.header-wrapper {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc; /* 구분선을 유지 */
+    padding: 20px; /* 패딩을 조정하여 결제 페이지와 간격을 조절 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: black; /* 검은색 글씨 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.search-form {
+    display: inline-block;
+}
+
+.search-form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* 버튼 색상 수정 */
+.search-form button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff; /* 파란색 */
+    color: white; /* 흰색 글씨 */
+    cursor: pointer;
+}
+
+.header-right ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header-right ul li {
+    margin-right: 20px;
+}
+
+/* 결제 페이지 스타일 */
+.checkout {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px; /* 상하 패딩을 줄여 헤더와 결제 페이지 간의 간격을 조정 */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkout h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.checkout h2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f9f9f9;
+}
+
+.cart-summary {
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+/* 폼 스타일 */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"], form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* 버튼 색상 수정 */
+form input[type="submit"] {
+    background-color: #007bff; /* 파란색 */
+    color: white; /* 흰색 글씨 */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3; /* 다크 블루 */
+}
+.payment-methods {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+}
+
+.payment-methods label {
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    margin-bottom: 10px; /* 각 라벨 간격 */
+}
+
+.payment-methods input[type="radio"] {
+    margin-right: 10px; /* 라디오 버튼과 이미지 사이 간격 */
+}
+
+/* 푸터 스타일 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
