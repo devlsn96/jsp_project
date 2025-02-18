@@ -530,7 +530,6 @@ ul, li, a, button {
     <script>
     
     	// 게시판 수정, 삭제
-    	
 	    function enableEdit() {
 	        // 제목과 내용을 편집 가능하게 함
 	        document.getElementById('title').readOnly = false;
@@ -572,7 +571,6 @@ ul, li, a, button {
 	            
 	        // 수정 완료 버튼 보이기
 	        document.getElementById('updateForm' + commentnum).style.display = 'block';
-	        	
 	        console.log("Reply " + commentnum + " is now editable");
 	    }
         
@@ -585,15 +583,15 @@ ul, li, a, button {
 
         function deleteReply(commentnum) {
             if (confirm("정말 이 댓글을 삭제하시겠습니까?")) {
-                location.href = "${pageContext.request.contextPath}/board/DeleteReply.bo?commentnum=" + commentnum + "&boardid=" + ${board.boardid};
+                location.href = "${pageContext.request.contextPath}/freeBoard/DeleteReply.bo?commentnum=" + commentnum + "&boardid=" + ${board.boardid};
             }
         }
         
         function goToPage(page) {
             if (page === 'qna') {
-                location.href = '${pageContext.request.contextPath}/app/qna/qna.jsp';
+                location.href = '${pageContext.request.contextPath}/qna/qna.jsp';
             } else if (page === 'board') {
-                location.href = '/board/BoardList.bo';
+                location.href = '/freeBoard/BoardList.bo';
             }
         }
         
@@ -777,8 +775,7 @@ ul, li, a, button {
                 <img src="${board.imagePath}" alt="첨부 이미지" class="image-preview">
             </div>
         </c:if>		 --%>
-		
-		
+
         <!-- 저장 버튼 -->
         <div class="button-container">
             <form action="${pageContext.request.contextPath}/freeBoard/UpdateBoard.bo" method="POST">

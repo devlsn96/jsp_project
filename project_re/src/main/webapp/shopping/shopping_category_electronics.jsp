@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>shopping_category_electronics</title>
-<link href="/app/shopping/css/shopping_category.css" rel="stylesheet" type="text/css">
+<link href="/shopping/css/shopping_category.css" rel="stylesheet" type="text/css">
 
 <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -142,8 +142,8 @@
 		       <nav>
 	       			<div class="community-menu" style="display: none;">
 		              <a class="header-lower__item" href="/index.jsp">홈</a>
-		              <a class="header-lower__item" href="/board/BoardList.bo">게시판</a>
-		              <a class="header-lower__item" href="/app/qna/qna.jsp">Q&amp;A</a>
+		              <a class="header-lower__item" href="/freeBoard/BoardList.bo">자유게시판</a>
+		              <a class="header-lower__item" href="/qna/qna.jsp">Q&amp;A</a>
 		              </div>
 		           		 <div class="shopping-menu">
 		                <a class="header-lower__item" href="/shopping/ShoppingHome.sh">홈</a>
@@ -208,7 +208,7 @@
 				<div class="banner">
 					<div class="img_ex">
 						<a href="#">
-							<img src="/app/shopping/images/category_banner3.png">
+							<img src="/shopping/images/category_banner3.png">
 						</a>
 					</div>
 				</div>
@@ -220,12 +220,12 @@
 					<div class="title_image">
 						<div class="img_ex1">
 							<a href="#">
-								<img src="/app/shopping/images/172681539361821029.webp">
+								<img src="/shopping/images/172681539361821029.webp">
 							</a>
 						</div>
 						<div class="img_ex2">
 							<a href="#">
-								<img src="/app/shopping/images/172681539371360735.webp">
+								<img src="/shopping/images/172681539371360735.webp">
 							</a>
 						</div>
 					</div>
@@ -233,7 +233,7 @@
 						<div class="title_image">
 						<div class="img_ex1">
 							<a href="#">
-								<img src="/app/shopping/images/172681540357989313.webp">
+								<img src="/shopping/images/172681540357989313.webp">
 							</a>
 						</div>
 					</div>
@@ -247,7 +247,7 @@
 						<div class="title_image">
 						<div class="img_ex1">
 							<a href="#">
-								<img src="/app/shopping/images/172622890357921283.jpeg">
+								<img src="/shopping/images/172622890357921283.jpeg">
 							</a>
 						</div>
 					</div>
@@ -261,24 +261,24 @@
 					<div class="title_image">
 						<div class="img_ex1">
 							<a href="#">
-								<img src="/app/shopping/images/172605056237521217.webp">
+								<img src="/shopping/images/172605056237521217.webp">
 							</a>
 						</div>
 						<div class="img_ex2">
 							<a href="#">
-								<img src="/app/shopping/images/172605056686185622.webp">
+								<img src="/shopping/images/172605056686185622.webp">
 							</a>
 						</div>
 					</div>
 					<div class="title_image">
 						<div class="img_ex1">
 							<a href="#">
-								<img src="/app/shopping/images/172560946471144444.webp">
+								<img src="/shopping/images/172560946471144444.webp">
 							</a>
 						</div>
 						<div class="img_ex2">
 							<a href="#">
-								<img src="/app/shopping/images/172560946465667132.webp">
+								<img src="/shopping/images/172560946465667132.webp">
 							</a>
 						</div>
 					</div>
@@ -310,7 +310,7 @@
 									${product.prod_price}
 								</div>
 								<div class="description_rating">
-									<div class="icon_star"><img src="/app/shopping/images/icon_star.png" alt="icon_star"></div>
+									<div class="icon_star"><img src="/shopping/images/icon_star.png" alt="icon_star"></div>
 									<div class="rating_num"><strong>4.5</strong> </div>
 									<div class="review_num">리뷰 999</div>
 								</div>

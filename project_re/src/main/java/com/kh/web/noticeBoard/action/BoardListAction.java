@@ -43,7 +43,7 @@ public class BoardListAction implements Action{
 		request.setAttribute("pageSize", pageSize);
 		request.setAttribute("totalCount", totalCount);
 		
-		forward.setPath("/board/boardlist.jsp");
+		forward.setPath("/noticeboard/boardlist.jsp");
 		forward.setRedirect(false);	// forward 이동
 		
 		

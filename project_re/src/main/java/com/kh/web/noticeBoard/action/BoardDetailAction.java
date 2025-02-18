@@ -20,7 +20,7 @@ public class BoardDetailAction implements Action{
 		
 		request.setAttribute("boardDetail", bdao.getBoardDetail(boardID));
 		
-		forward.setPath("/board/boardDetail.jsp");
+		forward.setPath("/noticeboard/boardDetail.jsp");
 		forward.setRedirect(false);	// forward 이동
 		
 		

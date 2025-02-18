@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>shopping_detailview</title>
-<link href="/app/shopping/css/shopping_detailview.css" rel="stylesheet" type="text/css">
+<link href="/shopping/css/shopping_detailview.css" rel="stylesheet" type="text/css">
 <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -133,8 +133,8 @@
 		       <nav>
 	       			<div class="community-menu" style="display: none;">
 		              <a class="header-lower__item" href="/index.jsp">홈</a>
-		              <a class="header-lower__item" href="/board/BoardList.bo">게시판</a>
-		              <a class="header-lower__item" href="/app/qna/qna.jsp">Q&amp;A</a>
+		              <a class="header-lower__item" href="/freeBoard/BoardList.bo">자유게시판</a>
+		              <a class="header-lower__item" href="/qna/qna.jsp">Q&amp;A</a>
 		              </div>
 		           		 <div class="shopping-menu">
 		                <a class="header-lower__item active" href="/shopping/ShoppingHome.sh">홈</a>
@@ -317,7 +317,7 @@
 						<div class="product_promotion_banner">
 							<a href="#">
 								<div class="img_ex">
-									<img src="/app/shopping/images/172680453048550315.avif">
+									<img src="/shopping/images/172680453048550315.avif">
 								</div>
 							</a>
 						</div>
@@ -389,10 +389,10 @@
 							</div> -->
 							<div class="product_inform_description_content">
 								<div class="img_ex">
-									<img src="/app/shopping/images/170778069306610551.avif">
+									<img src="/shopping/images/170778069306610551.avif">
 								</div>
 								<div class="img_ex">
-									<img src="/app/shopping/images/casamaru1.jpg">
+									<img src="/shopping/images/casamaru1.jpg">
 								</div>
 							</div>
 						</div>

@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>shopping_home</title>
-<link href="/app/shopping/css/shopping_home.css" rel="stylesheet" type="text/css">
+<link href="/shopping/css/shopping_home.css" rel="stylesheet" type="text/css">
 
 <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -130,8 +130,8 @@
 		       <nav>
 	       			<div class="community-menu" style="display: none;">
 		              <a class="header-lower__item" href="/index.jsp">홈</a>
-		              <a class="header-lower__item" href="/board/BoardList.bo">게시판</a>
-		              <a class="header-lower__item" href="/app/qna/qna.jsp">Q&amp;A</a>
+		              <a class="header-lower__item" href="/freeBoard/BoardList.bo">자유게시판</a>
+		              <a class="header-lower__item" href="/qna/qna.jsp">Q&amp;A</a>
 		             </div>
 		             
 		           	<div class="shopping-menu">
@@ -171,7 +171,7 @@
 </script>
 <div class="wrap">
 	<div class="main_images">
-		<a href="#"><img src="/app/shopping/images/home_banner1.png" alt="home_banner1"></a>
+		<a href="#"><img src="/shopping/images/home_banner1.png" alt="home_banner1"></a>
 	</div>
 	
 	<div class="tab_wrap">
@@ -228,19 +228,19 @@
 			<ul>
 				<li>
 					<a href="/shopping/ShoppingCategory.sh?prod_category=furniture">
-						<img src="/app/shopping/images/165698403420736265.avif" alt="가구">
+						<img src="/shopping/images/165698403420736265.avif" alt="가구">
 						<p>가구</p>
 					</a>
 				</li>
 				<li>
 					<a href="/shopping/ShoppingCategory.sh?prod_category=fabric">
-						<img src="/app/shopping/images/172474528642703614.avif" alt="패브릭">
+						<img src="/shopping/images/172474528642703614.avif" alt="패브릭">
 						<p>패브릭</p>
 					</a>
 				</li>
 				<li>
 					<a href="/shopping/ShoppingCategory.sh?prod_category=electronics">
-						<img src="/app/shopping/images/172474529155729560.avif" alt="가전·디지털">
+						<img src="/shopping/images/172474529155729560.avif" alt="가전·디지털">
 						<p>가전·디지털</p>
 					</a>
 				</li>
@@ -290,7 +290,7 @@
 								${product.prod_price}
 							</div>
 							<div class="description_rating">
-								<div class="icon_star"><img src="/app/shopping/images/icon_star.png" alt="icon_star"></div>
+								<div class="icon_star"><img src="/shopping/images/icon_star.png" alt="icon_star"></div>
 								<div class="rating_num"><strong>4.5</strong> </div>
 								<div class="review_num">리뷰 999</div>
 							</div>
@@ -302,8 +302,6 @@
 				</div>
 			</c:forEach>
 			<!-- 여기까지 추천 상품 4개 반복 -->
-			
-
 		</div>
 	</div>
 </div>

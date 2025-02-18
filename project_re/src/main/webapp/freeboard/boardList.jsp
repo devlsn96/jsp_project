@@ -420,9 +420,9 @@ ul, li, a, button {
     <script>
         function goToPage(page) {
             if (page === 'qna') {
-                location.href = '/app/qna/qna.jsp';
+                location.href = '/qna/qna.jsp';
             } else if (page === 'board') {
-                location.href = '/board/BoardList.bo';
+                location.href = '/freeBoard/BoardList.bo';
             }
         }
     </script>
@@ -579,12 +579,12 @@ ul, li, a, button {
 <div class="board-container">
     <div class="top-bar">
         <div class="search-box">
-            <form action="/app/freeboard/boardList.jsp" method="get">
+            <form action="/freeboard/boardList.jsp" method="get">
                 <input type="text" name="searchKeyword" placeholder="검색어를 입력하세요">
                 <button type="submit">검색</button>
             </form>
         </div>
-        <button class="btn-write" onclick="location.href='/app/freeboard/boardWrite.jsp'">게시판 작성</button>
+        <button class="btn-write" onclick="location.href='/freeboard/boardWrite.jsp'">게시판 작성</button>
     </div>
 
 <div class="board-container">
@@ -638,19 +638,19 @@ ul, li, a, button {
       <tr align = "center" valign = "middle">
          <td>
             <c:if test = "${nowPage > 1 }">
-               <a href = "/board/BoardList.bo?page=${nowPage - 1}">[&lt;]</a>
+               <a href = "/freeBoard/BoardList.bo?page=${nowPage - 1}">[&lt;]</a>
             </c:if>
             
             <c:forEach var = "i" begin = "${startPage }" end = "${endPage }">
                <c:choose>
                   <c:when test = "${i == nowPage }">[${i}]</c:when>
                   <c:otherwise>
-                     <a href = "/board/BoardList.bo?page=${i}">[${i}]</a>
+                     <a href = "/freeBoard/BoardList.bo?page=${i}">[${i}]</a>
                   </c:otherwise>
                </c:choose>
             </c:forEach>
             <c:if test = "${nowPage < totalPage }">
-               <a href = "/board/BoardList.bo?page=${nowPage + 1}">[&gt;]</a>
+               <a href = "/freeBoard/BoardList.bo?page=${nowPage + 1}">[&gt;]</a>
             </c:if>
          </td>
       </tr>

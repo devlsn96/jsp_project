@@ -396,9 +396,9 @@ ul, li, a, button {
     <script>
         function goToPage(page) {
             if (page === 'qna') {
-                location.href = '/app/qna/qna.jsp'; 
+                location.href = '/qna/qna.jsp'; 
             } else if (page === 'board') {
-                location.href = '/app/board/boardList.jsp'; 
+                location.href = '/freeboard/boardList.jsp'; 
             }
         }
     </script>
@@ -557,7 +557,7 @@ ul, li, a, button {
 
     <div class="button-container">
         <button type="submit" class="btn-submit" onclick="location.href='javascript:document.boardForm.submit();'">등록하기</button>
-        <button type="button" class="btn-list" onclick="location.href='/board/BoardList.bo'">목록</button>
+        <button type="button" class="btn-list" onclick="location.href='/freeBoard/BoardList.bo'">목록</button>
     </div>
 </form>
 </div>
