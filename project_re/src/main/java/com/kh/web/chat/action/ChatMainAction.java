@@ -1,6 +1,8 @@
 package com.kh.web.chat.action;
 
-import com.kh.web.chat.dao.ChatDAO;
+
+import com.kh.web.action.Action;
+import com.kh.web.action.ActionForward;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -11,7 +13,6 @@ public class ChatMainAction implements Action {
     @Override
     public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
         ActionForward forward = new ActionForward();
-        ChatDAO cdao = new ChatDAO();
         
         // 세션에서 user_id 값 가져오기
         HttpSession session = request.getSession();

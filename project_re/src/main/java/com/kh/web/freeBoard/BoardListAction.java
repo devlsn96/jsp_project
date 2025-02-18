@@ -72,9 +72,8 @@ public class BoardListAction implements Action {
 	    req.setAttribute("endPage", endPage);
 	    req.setAttribute("totalCnt", totalCnt);
 	    
-	    
 	    // 포워딩 경로 설정
-	    forward.setPath("/app/freeBoard/boardList.jsp");
+	    forward.setPath("/freeboard/boardList.jsp");
 	    forward.setRedirect(false);
 	    return forward;
 	}

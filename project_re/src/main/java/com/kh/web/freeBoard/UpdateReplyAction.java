@@ -53,7 +53,7 @@ public class UpdateReplyAction implements Action {
 		      System.out.println("수정할 댓글 번호: " + commentnum);
 			forward.setRedirect(true);
 			// 상세 보기 페이지로 이동
-			forward.setPath("/board/BoardView.bo?boardid=" + boardid);
+			forward.setPath("/freeBoard/BoardView.bo?boardid=" + boardid);
 		};
 		
 		return forward;

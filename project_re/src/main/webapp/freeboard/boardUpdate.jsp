@@ -40,7 +40,7 @@
 	<div class="container">
 	    <h2>게시글 수정</h2>
 	
-	    <form action="${pageContext.request.contextPath}/board/UpdateBoard.bo" method="post">
+	    <form action="/freeBoard/UpdateBoard.bo" method="post">
 	        <input type="hidden" name="boardid" value="${board.boardid}">
 	
 	        <!-- 수정할 게시글 제목 -->

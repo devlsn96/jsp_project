@@ -1,9 +1,9 @@
-<%@page import="com.kh.cart.web.dao.JoinProdDAO"%>
+<%@page import="com.kh.web.cart.dao.JoinProdDAO"%>
 <%@page import="com.kh.web.cart.dto.JoinProdDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
 <%@ page import="com.kh.web.cart.dto.CartProdDTO" %>
-<%@ page import="com.kh.cart.service.CartService" %>
+<%@ page import="com.kh.web.cart.CartService" %>
 <%@ page import="com.kh.web.cart.dto.ProductDTO" %>
 <%
    CartService cartService = new CartService();
@@ -446,8 +446,8 @@ ul, li, a, button {
              <nav>
                    <div class="community-menu">
                     <a class="header-lower__item active" href="">홈</a>
-                    <a class="header-lower__item" href="/board/BoardList.bo">게시판</a>
-                    <a class="header-lower__item" href="/app/qna/qna.jsp">Q&amp;A</a>
+                    <a class="header-lower__item" href="/freeBoard/BoardList.bo">게시판</a>
+                    <a class="header-lower__item" href="/qna/qna.jsp">Q&amp;A</a>
                     </div>
                      <!-- 쇼핑 하단 메뉴 추가 -->
                         <div class="shopping-menu" style="display: none;"> <!-- 기본적으로 숨김 -->

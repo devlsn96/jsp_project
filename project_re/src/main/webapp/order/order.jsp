@@ -1,8 +1,8 @@
 <%@page import="com.kh.web.user.dao.UsersDAO"%>
-<%@page import="com.kh.cart.web.dao.JoinProdDAO"%>
+<%@page import="com.kh.web.cart.dao.JoinProdDAO"%>
 <%@page import="com.kh.web.cart.dto.JoinProdDTO"%>
 <%@page import="com.kh.web.cart.dto.CartProdDTO"%>
-<%@page import="com.kh.cart.service.CartService"%>
+<%@page import="com.kh.web.cart.CartService"%>
 <%@page import="java.util.List"%>
 <%@page import="com.kh.web.order.dto.OrdersDTO"%>
 <%@page import="com.kh.web.order.dto.OrderProdDTO"%>
@@ -508,8 +508,8 @@ ul, li, a, button {
              <nav>
                    <div class="community-menu">
                     <a class="header-lower__item active" href="">홈</a>
-                    <a class="header-lower__item" href="/board/BoardList.bo">자유게시판</a>
-                    <a class="header-lower__item" href="/app/qna/qna.jsp">Q&amp;A</a>
+                    <a class="header-lower__item" href="/freeBoard/BoardList.bo">자유게시판</a>
+                    <a class="header-lower__item" href="/qna/qna.jsp">Q&amp;A</a>
                     </div>
                      <!-- 쇼핑 하단 메뉴 추가 -->
                         <div class="shopping-menu" style="display: none;"> <!-- 기본적으로 숨김 -->
@@ -614,7 +614,7 @@ ul, li, a, button {
        <input type="text" id="sample6_address" name="addr" placeholder="주소">
         
        <label for="addrDetail">상세주소:</label>
-      <input type="text" id="sample6_detailAddress" name="addrDetail" placeholder="상세주소">
+       <input type="text" id="sample6_detailAddress" name="addrDetail" placeholder="상세주소">
     
        <label for="tel">전화번호:</label>
        <input type="text" id="tel" name="tel" value="<%= phoneNumber != null ? phoneNumber : "" %>" required><br>
@@ -623,7 +623,7 @@ ul, li, a, button {
        <textarea id="req" name="req"></textarea><br>
        
        <h2>결제 수단 선택</h2>
-      <div class="payment-methods">
+       <div class="payment-methods">
           <label>
               <input type="radio" name="paymentMethod" value="card" checked>
               <span>

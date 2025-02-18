@@ -12,7 +12,7 @@ public class ShoppingHomeAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
 		ActionForward forward = new ActionForward();
 			
-		forward.setPath("/app/shopping/shopping_home.jsp");
+		forward.setPath("/shopping/shopping_home.jsp");
 		forward.setRedirect(false);
 		
 		return forward;

@@ -1,13 +1,11 @@
 package com.kh.web.user.dao;
 
 import java.util.HashMap;
-import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.kh.mybatis.SqlMapConfig;
-import com.kh.web.cart.dto.CartProdDTO;
 import com.kh.web.shopping.dao.ShoppingDAO;
 
 

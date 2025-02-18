@@ -1,6 +1,7 @@
 package com.kh.web.noticeBoard.action;
 
-import com.kh.web.chat.action.ActionForward;
+import com.kh.web.action.Action;
+import com.kh.web.action.ActionForward;
 import com.kh.web.noticeBoard.dao.BoardDAO;
 
 import jakarta.servlet.http.HttpServletRequest;

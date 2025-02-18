@@ -49,8 +49,6 @@ public class ShoppingFrontController extends HttpServlet {
 				forward = new ShoppingCartInsertAction().execute(req, resp);
 				//System.out.println("cart add front send");
 				break;
-				
-			
 		}
 		
 		if(forward != null) {

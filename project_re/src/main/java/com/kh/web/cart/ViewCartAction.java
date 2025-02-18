@@ -1,8 +1,7 @@
-package com.kh.cart1;
+package com.kh.web.cart;
 
 import java.util.List;
 
-import com.kh.cart.service.CartService;
 import com.kh.web.action.Action;
 import com.kh.web.action.ActionForward;
 import com.kh.web.cart.dto.CartProdDTO;
@@ -14,7 +13,7 @@ public class ViewCartAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
-ActionForward forward = new ActionForward();
+		ActionForward forward = new ActionForward();
         
         try {
             CartService cartService = new CartService();

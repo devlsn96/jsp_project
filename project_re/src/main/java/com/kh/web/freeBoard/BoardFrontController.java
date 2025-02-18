@@ -28,34 +28,33 @@ public class BoardFrontController extends HttpServlet {
 		ActionForward forward = null;
 		
 		switch(requtURI) {
-		case "/freeboard/BoardList.bo":
+		case "/freeBoard/BoardList.bo":
 			forward = new BoardListAction().execute(req,resp);
 			break;
-		case "/freeboard/BoardWrite.bo":
-			forward = new ActionForward(true, "/app/freeboard/boardWrite.jsp");
+		case "/freeBoard/BoardWrite.bo":
+			forward = new ActionForward(true, "/freeboard/boardWrite.jsp");
 			break;
-		case "/freeboard/BoardWriteOk.bo":
+		case "/freeBoard/BoardWriteOk.bo":
 			forward = new BoardWriteOkAction().execute(req, resp);
 			break;
-		case "/freeboard/BoardView.bo":
+		case "/freeBoard/BoardView.bo":
 			forward = new BoardViewAction().execute(req, resp);
 			break;
-		case "/freeboard/UpdateBoard.bo":
+		case "/freeBoard/UpdateBoard.bo":
 			forward = new UpdateBoardAction().execute(req, resp);
 			break;
-			
-		case "/freeboard/DeleteBoard.bo":
+		case "/freeBoard/DeleteBoard.bo":
 			forward = new DeleteBoardAction().execute(req,resp);
 			break;
 			
 		// 댓글
-		case "/freeboard/AddReply.bo":
+		case "/freeBoard/AddReply.bo":
 			forward = new AddReplyAction().execute(req, resp);
 			break;
-		case "/freeboard/UpdateReply.bo":
+		case "/freeBoard/UpdateReply.bo":
 			forward = new UpdateReplyAction().execute(req, resp); 
 			break;
-		case "/freeboard/DeleteReply.bo":
+		case "/freeBoard/DeleteReply.bo":
 			forward = new DeleteReplyAction().execute(req, resp);
 			break;
 		}

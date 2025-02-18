@@ -1,14 +1,12 @@
-
-  package com.kh.web.freeBoard;
+package com.kh.web.freeBoard;
   
-  import com.kh.web.action.Action; import
-  com.kh.web.action.ActionForward;
+import com.kh.web.action.Action; 
+import com.kh.web.action.ActionForward;
 import com.kh.web.freeBoard.dao.BoardDAO;
-import com.kh.web.freeBoard.dao.BoardDTO;
 import com.kh.web.freeBoard.dao.ReplyDTO;
 
-import jakarta.servlet.http.HttpServletRequest; import
-  jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest; 
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
   
   public class AddReplyAction implements Action{
@@ -19,10 +17,10 @@ import jakarta.servlet.http.HttpSession;
 		  BoardDAO bdao = new BoardDAO(); 
 		  ReplyDTO reply = new ReplyDTO();
 		  
-		  // 세션에서 로그인된 사용자의 userId 가져오기
+		  	// 세션에서 로그인된 사용자의 userId 가져오기
 	        HttpSession session = request.getSession();
 	        String userId = (String) session.getAttribute("user_id");
-
+	
 	        // 로그인 여부 확인
 	        if (userId == null) {
 	            System.out.println("세션이 만료되었거나 로그인되지 않은 상태입니다.");
@@ -43,7 +41,7 @@ import jakarta.servlet.http.HttpSession;
 		  
 		  if(bdao.addReply(reply)) { 
 			  forward.setRedirect(true);
-			  forward.setPath("/board/BoardView.bo?boardid=" + boardid); 
+			  forward.setPath("/freeBoard/BoardView.bo?boardid=" + boardid); 
 		  }
 	  
 	  

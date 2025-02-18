@@ -27,11 +27,11 @@ public class ShoppingCategoryAction implements Action {
 		
 		 // prod_category 값에 따라 포워딩 설정
         if ("fabric".equals(prod_category)) { 
-            forward.setPath("/app/shopping/shopping_category_fabric.jsp");
+            forward.setPath("/shopping/shopping_category_fabric.jsp");
         } else if ("electronics".equals(prod_category)) {
-            forward.setPath("/app/shopping/shopping_category_electronics.jsp");
+            forward.setPath("/shopping/shopping_category_electronics.jsp");
         } else {
-            forward.setPath("/app/shopping/shopping_category.jsp"); // !기본 경로!
+            forward.setPath("/shopping/shopping_category.jsp"); // !기본 경로!
         }
 
 		

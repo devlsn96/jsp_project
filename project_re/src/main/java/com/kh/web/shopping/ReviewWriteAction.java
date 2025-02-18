@@ -18,7 +18,7 @@ public class ReviewWriteAction implements Action {
    public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
       ActionForward forward = new ActionForward();
       ShoppingDAO sdao = new ShoppingDAO();
-      /* ReviewDTO review = new ReviewDTO(); */
+      // ReviewDTO review = new ReviewDTO(); 
       ReviewDTO review = new ReviewDTO();
       
       // 세션에서 유저 ID 확인하는 코드 추가

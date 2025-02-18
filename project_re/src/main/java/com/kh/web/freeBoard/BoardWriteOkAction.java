@@ -56,7 +56,7 @@ public class BoardWriteOkAction implements Action{
 			forward.setPath("/freeBoard/BoardView.bo?boardid=" + boardid);
 		} else {						
 			// 실패
-			forward.setPath("/freeBoard.BoardWrite.bo?flag=false");
+			forward.setPath("/freeBoard/BoardWrite.bo?flag=false");
 		}
 		
 		

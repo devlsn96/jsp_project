@@ -16,12 +16,11 @@ public class BoardViewAction implements Action{
 		int boardid = Integer.parseInt(request.getParameter("boardid"));
 		// System.out.println("BoardViewAction : " + boardid);
 
-		request.setAttribute("replylist", bdao.getReplys(boardid));
-		
+		request.setAttribute("replylist", bdao.getReplys(boardid));		
 		request.setAttribute("board", bdao.getDetail(boardid)); 
-		forward.setRedirect(false);
-		forward.setPath("/app/freeBoard/boardView.jsp");
 		
+		forward.setRedirect(false);
+		forward.setPath("/freeboard/boardView.jsp");
 		
 		return forward;
 	}

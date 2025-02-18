@@ -1,4 +1,4 @@
-package com.kh.cart1;
+package com.kh.web.cart;
 
 import java.io.IOException;
 
@@ -11,7 +11,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 
 @WebServlet("/cartController")
 public class FrontController extends HttpServlet {

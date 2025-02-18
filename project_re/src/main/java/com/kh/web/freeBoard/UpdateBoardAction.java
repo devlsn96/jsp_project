@@ -29,7 +29,6 @@ public class UpdateBoardAction implements Action {
         // DB에서 해당 게시글의 작성자 userId 가져오기
         String postOwnerId = bdao.getPostOwnerId(boardid);  // 게시글 작성자 조회
         
-        
         // 작성자와 로그인한 사용자 비교
         if (postOwnerId == null || !loggedInUserId.equals(postOwnerId)) {
             // 작성자와 현재 로그인한 사용자가 다르면 권한 없음 경고창 띄우기
@@ -37,13 +36,11 @@ public class UpdateBoardAction implements Action {
             try {
 				response.getWriter().println("<script>alert('수정할 권한이 없습니다.'); history.back();</script>");
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
             try {
 				response.getWriter().flush();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
             return null;  // 실행 종료

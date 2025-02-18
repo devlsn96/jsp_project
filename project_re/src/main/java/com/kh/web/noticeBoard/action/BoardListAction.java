@@ -1,12 +1,8 @@
 package com.kh.web.noticeBoard.action;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
-import com.kh.web.chat.action.ActionForward;
+import com.kh.web.action.Action;
+import com.kh.web.action.ActionForward;
 import com.kh.web.noticeBoard.dao.BoardDAO;
-import com.kh.web.noticeBoard.dao.BoardDTO;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

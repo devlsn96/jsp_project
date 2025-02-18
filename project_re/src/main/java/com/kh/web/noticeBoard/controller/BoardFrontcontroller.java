@@ -2,7 +2,7 @@ package com.kh.web.noticeBoard.controller;
 
 import java.io.IOException;
 
-import com.kh.web.chat.action.ActionForward;
+import com.kh.web.action.ActionForward;
 import com.kh.web.noticeBoard.action.BoardDetailAction;
 import com.kh.web.noticeBoard.action.BoardListAction;
 

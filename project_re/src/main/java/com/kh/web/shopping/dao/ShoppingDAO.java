@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import com.kh.mybatis.SqlMapConfig;
-import com.kh.web.cart.dto.CartChangeDTO;
 import com.kh.web.cart.dto.CartProdDTO;
 import com.kh.web.cart.dto.ProductDTO;
 

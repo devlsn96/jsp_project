@@ -40,13 +40,11 @@ public class DeleteBoardAction implements Action{
 	            try {
 					response.getWriter().println("<script>alert('삭제할 권한이 없습니다.'); history.back();</script>");
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 	            try {
 					response.getWriter().flush();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 	            return null;  // 실행 종료

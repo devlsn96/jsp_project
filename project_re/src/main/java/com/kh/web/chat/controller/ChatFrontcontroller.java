@@ -1,15 +1,9 @@
 package com.kh.web.chat.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-import com.kh.web.chat.action.ActionForward;
+import com.kh.web.action.ActionForward;
 import com.kh.web.chat.action.ChatMainAction;
-import com.kh.web.chat.dao.ChatDAO;
-import com.kh.web.chat.dao.ChatDTO;
-import com.kh.web.noticeBoard.action.BoardDetailAction;
-import com.kh.web.noticeBoard.action.BoardListAction;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;

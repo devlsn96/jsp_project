@@ -136,7 +136,7 @@
        			<div class="community-menu">
               <a class="header-lower__item active" href="/index.jsp">홈</a>
               <a class="header-lower__item" href="/freeBoard/BoardList.bo">자유게시판</a>
-              <a class="header-lower__item" href="/app/qna/qna.jsp">Q&amp;A</a>
+              <a class="header-lower__item" href="/qna/qna.jsp">Q&amp;A</a>
               </div>
                <!-- 쇼핑 하단 메뉴 추가 -->
            		 <div class="shopping-menu" style="display: none;"> <!-- 기본적으로 숨김 -->

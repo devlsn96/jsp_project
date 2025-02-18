@@ -1,7 +1,8 @@
-package com.kh.cart.service;
+package com.kh.web.cart;
 
 import java.util.List;
-import com.kh.cart.web.dao.CartProdDAO;
+
+import com.kh.web.cart.dao.CartProdDAO;
 import com.kh.web.cart.dto.CartProdDTO;
 
 public class CartService {

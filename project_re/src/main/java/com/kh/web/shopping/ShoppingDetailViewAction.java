@@ -29,9 +29,8 @@ public class ShoppingDetailViewAction implements Action {
         request.setAttribute("product", sdao.getDetail(prod_num));
         request.setAttribute("reviewList", reviewList);
         
-        
         forward.setRedirect(false);
-        forward.setPath("/app/shopping/shopping_detailview.jsp?prod_num=" + prod_num);
+        forward.setPath("/shopping/shopping_detailview.jsp?prod_num=" + prod_num);
         
         return forward;
 	}

@@ -26,13 +26,11 @@ public class ProductListAction implements Action {
         // 상품 목록을 request에 저장하기
         request.setAttribute("shoppingList", shoppingList);
         request.setAttribute("shoppingAllList", shoppingAllList);
+
+//        System.out.println(shoppingList);
+//        System.out.println(shoppingAllList);
         
-        
-        
-        System.out.println(shoppingList);
-        System.out.println(shoppingAllList);
-        
-        forward.setPath("/app/shopping/shopping_home.jsp");
+        forward.setPath("/shopping/shopping_home.jsp");
         forward.setRedirect(false);
         
         return forward;

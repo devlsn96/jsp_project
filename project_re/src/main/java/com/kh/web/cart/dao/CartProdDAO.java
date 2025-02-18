@@ -1,4 +1,4 @@
-package com.kh.cart.web.dao;
+package com.kh.web.cart.dao;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

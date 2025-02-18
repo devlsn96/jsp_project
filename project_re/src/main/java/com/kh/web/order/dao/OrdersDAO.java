@@ -26,7 +26,7 @@ public class OrdersDAO {
         }
     }
 
- // 주문 저장 후 생성된 주문 번호 반환
+    // 주문 저장 후 생성된 주문 번호 반환
     public int saveOrder(OrdersDTO order) {
         try (SqlSession session = sqlSessionFactory.openSession(true)) {
             session.insert("com.kh.web.order.dao.OrdersDAO.insertOrder", order); // Mapper 경로와 동일하게 설정

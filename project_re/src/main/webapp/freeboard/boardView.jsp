@@ -559,7 +559,6 @@ ul, li, a, button {
 	    
 	    
 	    // 댓글 수정, 삭제 
-	    
 	    function updateReply(commentnum) {
 	        let textarea = document.getElementById('reply' + commentnum);
 	        	
@@ -702,7 +701,7 @@ ul, li, a, button {
 	       			<div class="community-menu">
 		              <a class="header-lower__item active" href="">홈</a>
 		              <a class="header-lower__item" href="/freeBoard/BoardList.bo">자유게시판</a>
-		              <a class="header-lower__item" href="/app/qna/qna.jsp">Q&amp;A</a>
+		              <a class="header-lower__item" href="/qna/qna.jsp">Q&amp;A</a>
 		              </div>
 		               <!-- 쇼핑 하단 메뉴 추가 -->
 		           		 <div class="shopping-menu" style="display: none;"> <!-- 기본적으로 숨김 -->
@@ -759,7 +758,7 @@ ul, li, a, button {
                 <!-- 수정 버튼 -->
                 <button id="editButton" class="btn-action" onclick="enableEdit()">수정</button>
                 <!-- 삭제 버튼 -->
-                <form action="${pageContext.request.contextPath}/board/DeleteBoard.bo" method="POST"  onsubmit="return confirmDelete();">
+                <form action="${pageContext.request.contextPath}/freeBoard/DeleteBoard.bo" method="POST" onsubmit="return confirmDelete();">
                     <input type="hidden" name="boardid" value="${board.boardid}">
                     <button type="submit" class="btn-action" >삭제</button>
                 </form>
@@ -782,7 +781,7 @@ ul, li, a, button {
 		
         <!-- 저장 버튼 -->
         <div class="button-container">
-            <form action="${pageContext.request.contextPath}/board/UpdateBoard.bo" method="POST">
+            <form action="${pageContext.request.contextPath}/freeBoard/UpdateBoard.bo" method="POST">
                 <input type="hidden" name="boardid" value="${board.boardid}">
                 <input type="hidden" id="hiddenTitle" name="title" value="">
                 <input type="hidden" id="hiddenContent" name="content" value="">
@@ -791,10 +790,9 @@ ul, li, a, button {
         </div>
 			
 			
-			  <!-- **댓글** 출력 -->
+		<!-- **댓글** 출력 -->
 	    <div class="comments-container">
 	        <h3>댓글</h3>
-	
 	        <c:choose>
 	            <c:when test="${replylist != null and fn:length(replylist) > 0}">
 	                <c:forEach var="reply" items="${replylist}">
@@ -808,7 +806,7 @@ ul, li, a, button {
 							<button class="btn-action" onclick="updateReply(${reply.commentnum})">수정하기</button>
 							
 							<!-- **댓글** 수정 완료 버튼 -->
-							<form action="${pageContext.request.contextPath}/board/UpdateReply.bo" method="post" id="updateForm${reply.commentnum}" style="display:none;" onsubmit="prepareReplyUpdate(${reply.commentnum})">
+							<form action="${pageContext.request.contextPath}/freeBoard/UpdateReply.bo" method="post" id="updateForm${reply.commentnum}" style="display:none;" onsubmit="prepareReplyUpdate(${reply.commentnum})">
 							    <input type="hidden" name="commentnum" value="${reply.commentnum}">
 							    <input type="hidden" name="content" id="content${reply.commentnum}">
 							    <input type="hidden" name="boardid" value="${board.boardid}">
@@ -829,17 +827,15 @@ ul, li, a, button {
 	    <!-- **댓글** 작성 폼 -->
 	    <div class="reply-form">
 	        <h3>댓글 작성</h3>
-	        <form name="replyForm" action="${pageContext.request.contextPath}/board/AddReply.bo" method="post">
+	        <form name="replyForm" action="${pageContext.request.contextPath}/freeBoard/AddReply.bo" method="post">
 	            <input type="hidden" name="boardid" value="${board.boardid}">
 	            <textarea name="content" placeholder="댓글을 입력하세요" rows="4" style="resize: none;"></textarea>
 	            <button type="submit">댓글 등록</button>
 	        </form>
 	    </div>
-			
-			
-			
+	
 	<div class="button-container">
-	        <button type="button" class="btn-list" onclick="location.href='/board/BoardList.bo'">목록</button>
+	        <button type="button" class="btn-list" onclick="location.href='/freeBoard/BoardList.bo'">목록</button>
 	</div>
 
     </div>

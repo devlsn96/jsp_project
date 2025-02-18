@@ -3,7 +3,6 @@ package com.kh.web.user;
 import com.kh.web.action.Action;
 import com.kh.web.action.ActionForward;
 import com.kh.web.user.dao.UsersDAO;
-import com.kh.web.user.dao.UsersDTO;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

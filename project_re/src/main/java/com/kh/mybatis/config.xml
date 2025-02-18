@@ -10,8 +10,8 @@
         <typeAlias type="com.kh.web.cart.dto.JoinProdDTO" alias="joinproddto"/>
         <typeAlias type="com.kh.web.user.dao.UsersDTO" alias="usersdto"/>
         <typeAlias type="com.kh.web.cart.dto.CartChangeDTO" alias="CartChangeDTO"/>
-		<typeAlias type="com.kh.app.shopping.dao.ReviewDTO" alias="reviewdto"/>
-		<typeAlias type="com.kh.app.shopping.dao.ShoppingCartDTO" alias="shocartdto"/>
+		<typeAlias type="com.kh.web.shopping.dao.ReviewDTO" alias="reviewdto"/>
+		<typeAlias type="com.kh.web.shopping.dao.ShoppingCartDTO" alias="shocartdto"/>
 		<typeAlias type="com.kh.web.noticeBoard.dao.BoardDTO" alias="noticeBoardDto"/>
 		<typeAlias type="com.kh.web.chat.dao.ChatDTO" alias="chatdto"/>
 		<typeAlias type="com.kh.web.freeBoard.dao.BoardDTO" alias="freeBoarddto"/>
