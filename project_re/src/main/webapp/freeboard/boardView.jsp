@@ -756,7 +756,7 @@ ul, li, a, button {
                 <!-- 수정 버튼 -->
                 <button id="editButton" class="btn-action" onclick="enableEdit()">수정</button>
                 <!-- 삭제 버튼 -->
-                <form action="${pageContext.request.contextPath}/freeBoard/DeleteBoard.bo" method="POST" onsubmit="return confirmDelete();">
+                <form action="<%= request.getContextPath() %>/freeBoard/DeleteBoard.bo" method="post" onsubmit="return confirmDelete();">
                     <input type="hidden" name="boardid" value="${board.boardid}">
                     <button type="submit" class="btn-action" >삭제</button>
                 </form>
@@ -778,7 +778,7 @@ ul, li, a, button {
 
         <!-- 저장 버튼 -->
         <div class="button-container">
-            <form action="${pageContext.request.contextPath}/freeBoard/UpdateBoard.bo" method="POST">
+            <form action="<%= request.getContextPath() %>/freeBoard/UpdateBoard.bo" method="post">
                 <input type="hidden" name="boardid" value="${board.boardid}">
                 <input type="hidden" id="hiddenTitle" name="title" value="">
                 <input type="hidden" id="hiddenContent" name="content" value="">
@@ -803,7 +803,7 @@ ul, li, a, button {
 							<button class="btn-action" onclick="updateReply(${reply.commentnum})">수정하기</button>
 							
 							<!-- **댓글** 수정 완료 버튼 -->
-							<form action="${pageContext.request.contextPath}/freeBoard/UpdateReply.bo" method="post" id="updateForm${reply.commentnum}" style="display:none;" onsubmit="prepareReplyUpdate(${reply.commentnum})">
+							<form action="<%= request.getContextPath() %>/freeBoard/UpdateReply.bo" method="post" id="updateForm${reply.commentnum}" style="display:none;" onsubmit="prepareReplyUpdate(${reply.commentnum})">
 							    <input type="hidden" name="commentnum" value="${reply.commentnum}">
 							    <input type="hidden" name="content" id="content${reply.commentnum}">
 							    <input type="hidden" name="boardid" value="${board.boardid}">
@@ -824,7 +824,7 @@ ul, li, a, button {
 	    <!-- **댓글** 작성 폼 -->
 	    <div class="reply-form">
 	        <h3>댓글 작성</h3>
-	        <form name="replyForm" action="${pageContext.request.contextPath}/freeBoard/AddReply.bo" method="post">
+	        <form name="replyForm" action="<%= request.getContextPath() %>/freeBoard/AddReply.bo" method="post">
 	            <input type="hidden" name="boardid" value="${board.boardid}">
 	            <textarea name="content" placeholder="댓글을 입력하세요" rows="4" style="resize: none;"></textarea>
 	            <button type="submit">댓글 등록</button>
