@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Join">
+    <select id="getJoinProd" parameterType="_int" resultType="joinproddto">
+        SELECT a.PROD_IMAGE,a.PROD_NAME,b.PROD_CNT,a.PROD_PRICE,a.PROD_NUM 
+		FROM PRODUCT a
+		JOIN CART_PROD b
+		ON a.PROD_NUM = b.PROD_NUM
+		WHERE b.CART_NUM = #{cartNum}
+    </select>
+    
+    <update id="setJoinProd" parameterType="CartChangeDTO">
+	    UPDATE CART_PROD 
+	    SET PROD_CNT = #{prodcnt}
+	    WHERE CART_NUM = #{cartnum} AND PROD_NUM = #{prodnum}
+	</update>
+	
+	<delete id="deleteJoinProd" parameterType="CartChangeDTO">
+	    DELETE FROM CART_PROD
+	    WHERE CART_NUM = #{cartnum} AND PROD_NUM = #{prodnum}
+	</delete>
+	<!-- 결제 정보 가져오는 쿼리 추가 -->
+    <select id="getCheckoutProducts" parameterType="_int" resultType="joinproddto">
+        SELECT a.PROD_IMAGE as prodImage,
+               a.PROD_NAME as prodName,
+               b.PROD_CNT as prodCnt,
+               a.PROD_PRICE as prodPrice,
+               a.PROD_NUM as prodNum
+        FROM PRODUCT a
+        JOIN CART_PROD b ON a.PROD_NUM = b.PROD_NUM
+        WHERE b.CART_NUM = 1 <!-- CART_NUM에 따라 필터링 -->
+    </select>
+    
+    <select id="getJoin" parameterType="_int" resultType="joinproddto">
+        SELECT PROD_IMAGE ,PROD_NAME , 0 AS PROD_CNT , PROD_PRICE ,PROD_NUM 
+		FROM PRODUCT p 
+		WHERE PROD_NUM= #{PROD_NUM}
+    </select>
+    
+</mapper>

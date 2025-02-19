@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CartMapper">
+    <insert id="createCart" parameterType="com.kh.web.cart.dto.CartDTO">
+        INSERT INTO SHOPPING_CART (CART_NUM, USER_ID, PROD_CNT, PROD_PRICE)
+        VALUES (cart_seq.NEXTVAL, #{userId}, 0, 0)
+    </insert>
+    
+    <select id="getCartByUserId" parameterType="int" resultType="com.kh.web.cart.dto.CartDTO">
+        SELECT * FROM SHOPPING_CART WHERE USER_ID = #{userId}
+    </select>
+    
+    <update id="updateCartTotal" parameterType="com.kh.web.cart.dto.CartDTO">
+        UPDATE SHOPPING_CART
+        SET PROD_CNT = #{prodCnt}, PROD_PRICE = #{prodPrice}
+        WHERE CART_NUM = #{cartNum}
+    </update>
+    
+    <select id="getCartNum" parameterType="String" resultType="int">
+        SELECT CART_NUM FROM SHOPPING_CART WHERE USER_ID = #{userId} AND ROWNUM=1
+    </select>
+    
+</mapper>
