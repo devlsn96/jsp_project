@@ -406,7 +406,12 @@ ul, li, a, button {
                   <button class="header-upper__writeBt">글쓰기</button>
                   <div class="header-upper__lists" style="display: none;"> <!-- 기본적으로 숨김 -->
                     <ul>
-                      <li><a href=""><h4>사진 올리기</h4><p>우리 집의 공간과 나의 일상을 기록해 보세요.</p></a></li>
+                      <li>
+                      	<a href="">
+	                      	<h4>사진 올리기</h4>
+	                      	<p>우리 집의 공간과 나의 일상을 기록해 보세요.</p>
+                      	</a>
+                      </li>
                       <li><a href=""><h4>집들이 글쓰기</h4><p>집에 관한 이야기를 글로 작성해 보세요.</p></a></li>
                       <li><a href=""><h4>노하우 글쓰기</h4><p>다양한 인테리어 노하우를 공유해 주세요.</p></a></li>
                       <li><a href=""><h4>상품 리뷰 글쓰기</h4><p>상품 리뷰를 작성하고 포인트도 받아 보세요.</p></a></li>
@@ -446,7 +451,7 @@ ul, li, a, button {
              <nav>
                    <div class="community-menu">
                     <a class="header-lower__item active" href="">홈</a>
-                    <a class="header-lower__item" href="/freeBoard/BoardList.bo">게시판</a>
+                    <a class="header-lower__item" href="/freeBoard/BoardList.bo">자유게시판</a>
                     <a class="header-lower__item" href="/qna/qna.jsp">Q&amp;A</a>
                     </div>
                      <!-- 쇼핑 하단 메뉴 추가 -->

@@ -1,6 +1,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
@@ -11,17 +11,11 @@
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Gamja+Flower:400"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower:400" rel="stylesheet" />
 
     <!-- 아이콘 용 폰트 어썸 -->
-    <link
+    <link 
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
@@ -485,11 +479,19 @@ ul, li, a, button {
 					    <button class="header-upper__serviceBt">고객센터</button>
 					    <!-- 고객센터 관련 리스트 -->
 					    <div class="header-upper__serviceLists" style="display: none;"> <!-- 기본적으로 숨김 -->
-				      <ul>
-				        <li><a href="/board/BoardList.no"><h4>공지사항</h4></a></li>
-				        <li><a href="/chat/chatmain.ch"><h4>채팅방</h4></a></li>
-				      </ul>
-				   	 </div>
+					      <ul>
+					        <li>
+					        	<a href="/board/BoardList.no">
+					        		<h4>공지사항</h4>
+					        	</a>
+					        </li>
+					        <li>
+					        	<a href="/chat/chatmain.ch">
+					        		<h4>채팅방</h4>
+					        	</a>
+					        </li>
+					      </ul>
+				   	 	</div>
 				    </li>
 				    <li>
 				      <button class="header-upper__writeBt">글쓰기</button>
